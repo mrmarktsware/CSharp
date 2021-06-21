@@ -21,9 +21,13 @@ namespace CSharp
                 CSharp.ex10();
                 CSharp.ex11();  
                 CSharp.ex12(); 
-                CSharp.ex13(); */
+                CSharp.ex13(); 
                 CSharp.ex14();
-                CSharp.ex15();
+                CSharp.ex15("walrus");
+                CSharp.ex15("russia");
+                CSharp.ex15("rush rush rush");
+                CSharp.ex16("Okapi");*/
+                CSharp.ex17("Walrus");
             }
 
 
@@ -84,30 +88,27 @@ namespace CSharp
                 number2=number3;
                 System.Console.WriteLine("Exercise 5");
                 System.Console.WriteLine("Numbers input are {0} and {1}, numbers swapped are {1} and {0}",number1,number2);
-
             }
 
 
             private static void ex6()
             {
+                int number1;
+                int number2;
+                int number3;
 
-            int number1;
-            int number2;
-            int number3;
+                System.Console.WriteLine("Exercise 6");
 
-            System.Console.WriteLine("Exercise 6");
+                System.Console.WriteLine("Enter the first number");
+                number1=Convert.ToInt32(System.Console.ReadLine());
 
-            System.Console.WriteLine("Enter the first number");
-            number1=Convert.ToInt32(System.Console.ReadLine());
+                System.Console.WriteLine("Please enter the Second Number");
+                number2=Convert.ToInt32(System.Console.ReadLine());
 
-            System.Console.WriteLine("Please enter the Second Number");
-            number2=Convert.ToInt32(System.Console.ReadLine());
-
-            System.Console.WriteLine("Please Enter the Third Number");
-            number3=Convert.ToInt32(System.Console.ReadLine());
-
-            System.Console.WriteLine(number1*number2*number3);
-
+                System.Console.WriteLine("Please Enter the Third Number");
+                number3=Convert.ToInt32(System.Console.ReadLine());
+                
+                System.Console.WriteLine(number1*number2*number3);
             }
 
             private static void ex7()
@@ -169,33 +170,28 @@ namespace CSharp
                 Number3=System.Convert.ToInt32(System.Console.ReadLine());
                 System.Console.WriteLine("Please enter the 4th Number");
                 Number4=System.Convert.ToInt32(System.Console.ReadLine());
-
                 System.Console.WriteLine("The Average of {0},{1},{2},{3} is {4}",Number1, Number2, Number3, Number4, (Number1+Number2+Number3+Number4)/4);
-
             }
 
 
 
             private static void ex10()
             {
+                int Number1;
+                int Number2;
+                int Number3;
 
-            int Number1;
-            int Number2;
-            int Number3;
+                System.Console.WriteLine("Exercise 10");
+                System.Console.WriteLine("output of (x+y).z and x.y + y.z.");
+                System.Console.WriteLine("Please Enter the 1st Number");
+                Number1=System.Convert.ToInt32(System.Console.ReadLine());
+                System.Console.WriteLine("Please Enter the 2nd Number");
+                Number2=System.Convert.ToInt32(System.Console.ReadLine());
+                System.Console.WriteLine("Please Enter the 3rd Number");
+                Number3=System.Convert.ToInt32(System.Console.ReadLine());
 
-            System.Console.WriteLine("Exercise 10");
-            System.Console.WriteLine("output of (x+y).z and x.y + y.z.");
-            System.Console.WriteLine("Please Enter the 1st Number");
-            Number1=System.Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("Please Enter the 2nd Number");
-            Number2=System.Convert.ToInt32(System.Console.ReadLine());
-            System.Console.WriteLine("Please Enter the 3rd Number");
-            Number3=System.Convert.ToInt32(System.Console.ReadLine());
-
-            System.Console.WriteLine("(x+y).z = ({0}+{1}*{2})={3}",Number1, Number2, Number3, (Number1+Number2)*Number3);
-            System.Console.WriteLine("x.y + y.z = {0} * {1} + {1} * {2} = {3}",Number1, Number2, Number3, (Number1 * Number2)+(Number2 * Number3));
-
-
+                System.Console.WriteLine("(x+y).z = ({0}+{1}*{2})={3}",Number1, Number2, Number3, (Number1+Number2)*Number3);
+                System.Console.WriteLine("x.y + y.z = {0} * {1} + {1} * {2} = {3}",Number1, Number2, Number3, (Number1 * Number2)+(Number2 * Number3));
             }
 
 
@@ -207,7 +203,7 @@ namespace CSharp
               System.Console.WriteLine("Please Enter your Age");
               age=System.Convert.ToInt32(System.Console.ReadLine());
 
-            System.Console.WriteLine("You look younger then {0}",age);
+                System.Console.WriteLine("You look younger then {0}",age);
             }
 
 
@@ -257,18 +253,34 @@ namespace CSharp
                 /* convertions are near enough, rounding due to using integers */
                 System.Console.WriteLine("{0} celsius = {1} Farenheight",celsius,celsius * (9/5)+32);
                 System.Console.WriteLine("{0} celsius = {1} Kelvin",celsius,celsius+273);
-
             }
 
 
-            private static void ex15()
+            private static void ex15(string TheString)
             {
-                string TheString;
-                TheString="I am the walrus";
                 TheString=TheString.Replace("rus","");
                 System.Console.WriteLine(TheString);
+                System.Console.WriteLine(TheString);
+            }
+
+
+            private static void ex16(String TheString)
+            {
+                String OString;
+                OString=TheString;
+                OString=TheString.Substring(TheString.Length-1)+TheString.Substring(1,TheString.Length-2)+TheString.Substring(0,1);
+                System.Console.WriteLine(OString);
+          
+            }
+
+
+            private static void ex17(string TheString)
+            {
+                System.Console.WriteLine(TheString.Substring(0,1)+TheString+TheString.Substring(0,1));
 
             }
+
+
 
 
         }
