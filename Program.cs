@@ -1,14 +1,15 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace CSharp
 {
+
    class CSharp
     {
 
             private static void Main()
             {
-                CSharp.ex1();
+                /*CSharp.ex1();
                 CSharp.ex2();
                 CSharp.ex3();
                 CSharp.ex4();
@@ -20,8 +21,9 @@ namespace CSharp
                 CSharp.ex10();
                 CSharp.ex11();  
                 CSharp.ex12(); 
-                CSharp.ex13(); 
+                CSharp.ex13(); */
                 CSharp.ex14();
+                CSharp.ex15();
             }
 
 
@@ -72,7 +74,6 @@ namespace CSharp
 
                int number2;
                int number3;
-               int number4;
 
                 System.Console.WriteLine("Input Number1");
                 number1=Convert.ToInt32 (System.Console.ReadLine());
@@ -259,6 +260,15 @@ namespace CSharp
 
             }
 
+
+            private static void ex15()
+            {
+                string TheString;
+                TheString="I am the walrus";
+                TheString=TheString.Replace("rus","");
+                System.Console.WriteLine(TheString);
+
+            }
 
 
         }
